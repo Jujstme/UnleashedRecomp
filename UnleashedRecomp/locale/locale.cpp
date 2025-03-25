@@ -145,7 +145,7 @@ std::unordered_map<std::string_view, std::unordered_map<ELanguage, std::string>>
         "Options_Desc_NotAvailable",
         {
             { ELanguage::English,  "This option is not available at this location." },
-            { ELanguage::Japanese, "この\u200Bオプションは\u200B[現在:げんざい]の\u200B[画面:がめん]で\u200B[変更:へんこう]\u200Bできません" },
+            { ELanguage::Japanese, "この\u200Bオプションは\u200B[現在:げんざい]の\u200B[画面:がめん]では\u200B[変更:へんこう]\u200Bできません" },
             { ELanguage::German,   "Diese Option ist an dieser Stelle nicht verfügbar." },
             { ELanguage::French,   "Cette option n'est pas disponible pour l'instant." },
             { ELanguage::Spanish,  "Esta opción no está disponible en este momento." },
@@ -158,7 +158,7 @@ std::unordered_map<std::string_view, std::unordered_map<ELanguage, std::string>>
         "Options_Desc_NotAvailableFullscreen",
         {
             { ELanguage::English,  "This option is not available in fullscreen mode." },
-            { ELanguage::Japanese, "この\u200Bオプションは\u200Bフルスクリーンモードで\u200B[変更:へんこう]\u200Bできません" },
+            { ELanguage::Japanese, "この\u200Bオプションは\u200Bフルスクリーンモードでは\u200B[変更:へんこう]\u200Bできません" },
             { ELanguage::German,   "Diese Option ist im Vollbildmodus nicht verfügbar." },
             { ELanguage::French,   "Cette option n'est pas disponible en mode plein écran." },
             { ELanguage::Spanish,  "Esta opción no está disponible en modo pantalla completa." },
@@ -171,7 +171,7 @@ std::unordered_map<std::string_view, std::unordered_map<ELanguage, std::string>>
         "Options_Desc_NotAvailableWindowed",
         {
             { ELanguage::English,  "This option is not available in windowed mode." },
-            { ELanguage::Japanese, "この\u200Bオプションは\u200Bウィンドウモードで\u200B[変更:へんこう]\u200Bできません" },
+            { ELanguage::Japanese, "この\u200Bオプションは\u200Bウィンドウモードでは\u200B[変更:へんこう]\u200Bできません" },
             { ELanguage::German,   "Diese Option ist im Fenstermodus nicht verfügbar." },
             { ELanguage::French,   "Cette option n'est pas disponible en mode fenêtré." },
             { ELanguage::Spanish,  "Esta opción no está disponible en modo ventana." },
@@ -304,7 +304,7 @@ std::unordered_map<std::string_view, std::unordered_map<ELanguage, std::string>>
         "Installer_Page_Introduction",
         {
             { ELanguage::English,  "Welcome to\nUnleashed Recompiled!\n\nYou'll need an Xbox 360 copy\nof Sonic Unleashed in order to proceed with the installation." },
-            { ELanguage::Japanese, "Unleashed Recompiledへようこそ！\nインストールにはXbox 360[版:ばん]の\n「ソニック ワールドアドベンチャー」\nが必要です" },
+            { ELanguage::Japanese, "Unleashed Recompiledへようこそ！\nインストールには\n[北米版:ほくべいばん]またはEU[版:ばん]のXbox 360[用:よう]\n「SONIC UNLEASHED」が[必要:ひつよう]です" },
             { ELanguage::German,   "Willkommen zu\nUnleashed Recompiled!\nEs wird eine Xbox 360 Kopie von Sonic Unleashed benötigt um mit der Installation fortfahren zu können." },
             { ELanguage::French,   "Bienvenue sur\nUnleashed Recompiled !\n\nVous aurez besoin d'une copie de Sonic Unleashed pour Xbox\n360 pour procéder à l'installation." },
             { ELanguage::Spanish,  "¡Bienvenido a\nUnleashed Recompiled!\n\nNecesitas una copia de\nSonic Unleashed de Xbox 360\npara continuar con la instalación." },
@@ -366,7 +366,7 @@ std::unordered_map<std::string_view, std::unordered_map<ELanguage, std::string>>
             { ELanguage::English,  "Installation complete!\nThis project is brought to you by:" },
             { ELanguage::Japanese, "インストール[完了:かんりょう]！\nプロジェクト[制作:せいさく]：" },
             { ELanguage::German,   "Installation abgeschlossen!\nDieses Projekt wird präsentiert von:" },
-            { ELanguage::French,   "Installation terminée !\nCe projet vous est présenté par:" },
+            { ELanguage::French,   "Installation terminée !\nCe projet vous est présenté par :" },
             { ELanguage::Spanish,  "¡Instalación completada!\nEste proyecto ha sido posible gracias a:" },
             { ELanguage::Italian,  "Installazione completata!\nQuesto progetto è stato creato da:" }
         }

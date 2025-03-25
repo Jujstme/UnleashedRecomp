@@ -22,6 +22,7 @@
 #include <ui/game_window.h>
 #include <ui/installer_wizard.h>
 #include <mod/mod_loader.h>
+#include <preload_executable.h>
 
 #ifdef _WIN32
 #include <timeapi.h>
@@ -196,14 +197,19 @@ int main(int argc, char *argv[])
 
     os::logger::Init();
 
+    PreloadContext preloadContext;
+    preloadContext.PreloadExecutable();
+
     bool forceInstaller = false;
     bool forceDLCInstaller = false;
+    bool useDefaultWorkingDirectory = false;
     const char *sdlVideoDriver = nullptr;
 
     for (uint32_t i = 1; i < argc; i++)
     {
         forceInstaller = forceInstaller || (strcmp(argv[i], "--install") == 0);
         forceDLCInstaller = forceDLCInstaller || (strcmp(argv[i], "--install-dlc") == 0);
+        useDefaultWorkingDirectory = useDefaultWorkingDirectory || (strcmp(argv[i], "--use-cwd") == 0);
 
         if (strcmp(argv[i], "--sdl-video-driver") == 0)
         {
@@ -212,6 +218,13 @@ int main(int argc, char *argv[])
             else
                 LOGN_WARNING("No argument was specified for --sdl-video-driver. Option will be ignored.");
         }
+    }
+
+    if (!useDefaultWorkingDirectory)
+    {
+        // Set the current working directory to the executable's path.
+        std::error_code ec;
+        std::filesystem::current_path(os::process::GetExecutablePath().parent_path(), ec);
     }
 
     Config::Load();
