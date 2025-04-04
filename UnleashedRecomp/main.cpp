@@ -239,9 +239,6 @@ int main(int argc, char *argv[])
     }
 
     Config::Load();
-    
-    if (!PersistentStorageManager::LoadBinary())
-        LOGFN_ERROR("Failed to load persistent storage binary... (status code {})", (int)PersistentStorageManager::BinStatus);
 
     if (forceInstallationCheck)
     {
@@ -342,6 +339,9 @@ int main(int argc, char *argv[])
     }
 
     ModLoader::Init();
+
+    if (!PersistentStorageManager::LoadBinary())
+        LOGFN_ERROR("Failed to load persistent storage binary... (status code {})", (int)PersistentStorageManager::BinStatus);
 
     KiSystemStartup();
 
